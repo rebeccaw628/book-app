@@ -1,0 +1,10 @@
+@use "../partials/typography.scss" as t;
+
+* {
+  box-sizing: content-box;
+}
+
+html {
+  // background-color: #badefb;
+  font-family: t.$heading;
+}

@@ -1,0 +1,10 @@
+@use "../../.././modules/mixins.scss";
+
+.container {
+  @include mixins.flex;
+}
+
+.heading {
+  font-weight: 600;
+  @include mixins.background;
+}

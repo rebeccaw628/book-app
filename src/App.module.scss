@@ -1,0 +1,6 @@
+@use "../modules/mixins.scss";
+
+.heading {
+  font-weight: 600;
+  @include mixins.background;
+}
