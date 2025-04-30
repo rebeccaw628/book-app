@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router";
 import { useRef } from "react";
-import { getBooks } from "../services/fetch-services";
 import classes from "./SearchBar.module.scss";
 import { IoSearchCircle } from "react-icons/io5";
 
@@ -10,7 +9,6 @@ const SearchBar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setError(null);
     navigate(`/search/${inputRef.current.value}`);
   };
 

@@ -1,6 +1,3 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router";
-import { getBooks } from "../services/fetch-services";
 import classes from "./BookGrid.module.scss";
 import BookCard from "../BookCard/BookCard";
 

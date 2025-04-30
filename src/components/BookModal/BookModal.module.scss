@@ -1,9 +1,9 @@
 @use "../../../modules/mixins.scss";
 @use "../../../partials/colors";
 @use "../../../partials/sizing";
+@use "../../../partials/media-queries" as mq;
 
 .modal {
-  // display: none;
   position: fixed;
   z-index: 10;
   display: flex;
@@ -16,7 +16,6 @@
   transform: translate(-50%, -50%);
 
   &__overlay {
-    // position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -30,8 +29,6 @@
   }
 
   &__content {
-    // border: solid 2px black;
-    // @include mixins.flex(column, center);
     background-color: colors.$primary;
     height: 80vh;
     width: 80vw;
@@ -43,7 +40,6 @@
     overflow-y: scroll;
     overflow-x: hidden;
     box-shadow: 1px 0px 9px 6px (colors.$secondary);
-    // border: solid 2px red;
     &::-webkit-scrollbar {
       display: none;
     }
@@ -55,10 +51,15 @@
 
   &__img {
     min-width: 138px;
-    width: sizing.$book-width;
-    height: sizing.$card-height;
+    width: 1.2 * sizing.$book-width;
+    height: 1.2 * sizing.$card-height;
     object-fit: cover;
     border-radius: 20px;
+    @include mq.md-up {
+      width: 1.8 * sizing.$book-width;
+      height: 1.8 * sizing.$card-height;
+      align-self: center;
+    }
   }
 
   &__close {

@@ -2,7 +2,6 @@ import classes from "./Home.module.scss";
 import Logo from "../../components/Logo/Logo";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Header from "../../components/Header/Header";
-import { getBooks } from "../../components/services/fetch-services";
 
 const Home = () => {
   return (

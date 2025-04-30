@@ -1,12 +1,17 @@
 import classes from "./BookModal.module.scss";
-import { useState } from "react";
 import { details } from "../services/data-services";
-import { FaBook } from "react-icons/fa";
-import { IoCloseCircle } from "react-icons/io5";
 
 const BookModal = ({ closeModal, bookInfo }) => {
-  const { Title, Author, Description } = details(bookInfo);
-  const entries = Object.entries(details(bookInfo)).slice(3);
+  const {
+    title,
+    author,
+    description,
+    genre,
+    isbn,
+    pages,
+    publishedDate,
+    publisher,
+  } = details(bookInfo);
 
   return (
     <div className={classes.modal}>
@@ -27,21 +32,27 @@ const BookModal = ({ closeModal, bookInfo }) => {
             </span>
           </div>
           <div className={classes.modal__text}>
-            <h3 className={classes.modal__title}>{Title}</h3>
-            <h4 className={classes.modal__author}>{Author}</h4>
-            <p>{Description}</p>
-            {/*<h5>Genre: {genre}</h5>
-          <h5>ISBN: {isbn}</h5>
-          <h5>Pages: {pages}</h5>
-          <h5>Published Date: {publishedDate}</h5>
-          <h5>Publisher: {publisher}</h5> */}
-            {entries.map(([key, value]) => {
-              return (
-                <p className={classes.modal__bold} key={key}>
-                  {key}: <span className={classes.modal__details}>{value}</span>
-                </p>
-              );
-            })}
+            <h3 className={classes.modal__title}>{title}</h3>
+            <h4 className={classes.modal__author}>{author}</h4>
+            <p>{description}</p>
+            <p className={classes.modal__bold}>
+              Genre:<span className={classes.modal__details}> {genre}</span>
+            </p>
+            <p className={classes.modal__bold}>
+              ISBN: <span className={classes.modal__details}> {isbn}</span>
+            </p>
+            <p className={classes.modal__bold}>
+              Page count:
+              <span className={classes.modal__details}> {pages}</span>
+            </p>
+            <p className={classes.modal__bold}>
+              Published:
+              <span className={classes.modal__details}> {publishedDate}</span>
+            </p>
+            <p className={classes.modal__bold}>
+              Publisher:
+              <span className={classes.modal__details}> {publisher}</span>
+            </p>
           </div>
         </div>
       </div>

@@ -4,9 +4,7 @@ import BookModal from "../BookModal/BookModal";
 import { useState } from "react";
 
 const BookCard = ({ bookInfo }) => {
-  console.log(bookInfo);
-  // const displayDetails = details(bookInfo);
-  const { Title, Author } = details(bookInfo);
+  const { title, author } = details(bookInfo);
   const numberOfAuthors = bookInfo.authors?.length || 0;
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -19,17 +17,17 @@ const BookCard = ({ bookInfo }) => {
         <img
           className={classes.card__img}
           src={bookInfo.imageLinks.thumbnail}
-          alt={bookInfo.title}
+          alt={title}
         ></img>
       ) : (
-        <p className={classes.card__noImg}>{Title}</p>
+        <p className={classes.card__noImg}>{title}</p>
       )}
       <div className={classes.card__preview}>
         <div className={classes.card__text}>
-          <h4 className={classes.card__title}>{Title}</h4>
+          <h4 className={classes.card__title}>{title}</h4>
           <p className={classes.card__author}>
             {numberOfAuthors > 1 ? "Authors: " : "Author: "}
-            {Author}
+            {author}
           </p>
         </div>
         <div className={classes.card__btn}>
@@ -38,9 +36,6 @@ const BookCard = ({ bookInfo }) => {
           </button>
         </div>
       </div>
-      {/* <div className={classes.card__overview}>
-        <p>{displayDetails.description}</p>
-      </div> */}
 
       {isModalOpen && (
         <BookModal

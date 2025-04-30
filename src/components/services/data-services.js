@@ -17,34 +17,14 @@ export const details = (bookInfo) => {
   const publisher = bookInfo.publisher
     ? bookInfo.publisher
     : "Unknown publisher";
-  //   const preview = bookInfo.previewLink ? (
-  //     <a href={bookInfo.previewLink} target="_blank">
-  //       View preview
-  //     </a>
-  //   ) : (
-  //     <p>No preview available</p>
-  //   );
   return {
-    Title: title,
-    Author: author,
-    Description: description,
-    Genre: genre,
-    ISBN: isbn,
-    Pages: pages,
-    Published: publishedDate,
-    Publisher: publisher,
-    // preview,
+    title,
+    author,
+    description,
+    genre,
+    isbn,
+    pages,
+    publishedDate,
+    publisher,
   };
 };
-
-// export const thumbnail = (bookInfo, books__img, books__noImg) => {
-//   return bookInfo.imageLinks.thumbnail ? (
-//     <img
-//       src={bookInfo.imageLinks.thumbnail}
-//       alt={bookInfo.title}
-//       className={books__img}
-//     ></img>
-//   ) : (
-//     <p className={books__noImg}>'No thumbnail available'</p>
-//   );
-// };

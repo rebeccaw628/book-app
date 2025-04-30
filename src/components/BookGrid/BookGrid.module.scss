@@ -5,15 +5,10 @@
 
 .bookgrid {
   display: grid;
-  // grid-template-columns: repeat(auto-fit, 1.5 * sizing.$card-width);
   justify-content: center;
   width: 100%;
-  // grid-auto-rows: sizing.$card-height;
-  // justify-items: center;
-  // flex-wrap: wrap;
   gap: 15px;
-  //   background-color: colors.$bg;
-  // border: solid 2px green;
+
   @include mq.md-up {
     grid-template-columns: repeat(auto-fit, 1.5 * sizing.$card-width);
     gap: 35px;

@@ -2,9 +2,6 @@
 @use "../../../partials/colors";
 
 .form {
-  //   position: relative;
-  //   top: 50%;
-  //   left: 50%;
   @include mixins.flex(row, center);
   width: 50%;
   align-items: center;
@@ -20,12 +17,9 @@
   &.focus {
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
   }
-  // border: solid 2px red;
 }
 
 .searchBar {
-  //   position: absolute;
-  //   top: 10px;
   margin-left: 20px;
   font-size: 13px;
   background: none;
@@ -43,9 +37,6 @@
 
 .searchBtn {
   all: unset;
-  // &:hover {
-  //   background-color: colors.$bg;
-  // }
 }
 
 input::placeholder {

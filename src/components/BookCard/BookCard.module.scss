@@ -3,36 +3,18 @@
 @use "../../../partials/media-queries" as mq;
 @use "../../../partials/sizing";
 
-// .books {
-//   @include mixins.flex(row, center);
-//   //   align-items: flex-start;
-//   gap: 35px;
-//   //   border: solid 2px purple;
-
 .card {
   @include mixins.flex(row, flex-start);
-  // align-items: flex-start;
   gap: 15px;
   align-items: center;
   width: sizing.$card-width;
-  // width: 100%;
+
   background: #d6c0b3;
   border-radius: 20px;
   padding: 5px 5px 5px 0px;
   box-sizing: border-box;
-  // color: white;
   height: sizing.$card-height;
   box-shadow: 1px 0px 9px 6px (colors.$secondary);
-  // -webkit-box-shadow: 1px 0px 9px 6px rgba(150, 143, 143, 0.75);
-  // -moz-box-shadow: 1px 0px 9px 6px rgba(150, 143, 143, 0.75);
-  // border: solid 2px orange;
-
-  // &:hover {
-  //   // width: 1.1 * sizing.$card-width;
-  //   // height: 1.1 * sizing.$card-height;
-  //   transform: scale(1.1);
-  //   transition: 0.5s;
-  // }
 
   @include mq.md-up {
     width: 1.5 * sizing.$card-width;
@@ -40,44 +22,16 @@
   }
 
   &__img {
-    // position: relative;
     min-width: 138px;
     width: sizing.$book-width;
     height: inherit;
     object-fit: fill;
     border-radius: 20px;
     overflow: hidden;
-    // margin-left: 0px;
-    // border: solid 2px blue;
 
     @include mq.md-up {
       min-width: 210px;
     }
-
-    // &:hover {
-    //   .card__overview {
-    //     color: white;
-    //     display: block;
-    //     // text-align: center;
-    //     width: 100%;
-    //     height: 100%;
-    //     border-radius: inherit;
-    //     overflow: scroll;
-    //     overflow-y: scroll;
-    //     overflow-x: hidden;
-    //     // border: solid 2px blue;
-    //     box-sizing: border-box;
-    //     padding: 0px 20px;
-
-    //     &::-webkit-scrollbar {
-    //       display: none;
-    //     }
-    //   }
-
-    //   &::after {
-    //     opacity: 0.8;
-    //   }
-    // }
   }
 
   &__noImg {
@@ -86,7 +40,6 @@
     text-align: center;
     width: sizing.$book-width;
     height: sizing.$card-height;
-    // border: solid 2px orange;
     @include mq.md-up {
       min-width: 210px;
     }
@@ -97,7 +50,14 @@
     height: 95%;
     align-self: flex-start;
     gap: 5px;
-    // border: solid 2px red;
+    text-overflow: ellipsis;
+    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__text {
@@ -135,45 +95,5 @@
 
   @include mq.md-up {
     position: relative;
-
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   // width: 100%;
-    //   // height: 100%;
-    //   background-color: black;
-    //   border-radius: 20px;
-    //   left: 0;
-    //   top: 0;
-    //   right: 0;
-    //   bottom: 0;
-    //   opacity: 0;
-    //   border: solid 2px red;
-    // }
-
-    // &:hover {
-    //   .card__overview {
-    //     color: white;
-    //     display: block;
-    //     // text-align: center;
-    //     width: 100%;
-    //     height: 100%;
-    //     border-radius: inherit;
-    //     overflow: scroll;
-    //     overflow-y: scroll;
-    //     overflow-x: hidden;
-    //     // border: solid 2px blue;
-    //     box-sizing: border-box;
-    //     padding: 0px 20px;
-
-    //     &::-webkit-scrollbar {
-    //       display: none;
-    //     }
-    //   }
-
-    //   &::after {
-    //     opacity: 0.8;
-    //   }
-    // }
   }
 }
