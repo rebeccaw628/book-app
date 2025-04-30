@@ -1,0 +1,10 @@
+@use "../../../modules/mixins.scss";
+@use "../../../partials/colors";
+
+.logo {
+  //   @include mixins.branding;
+  @include mixins.text(3rem, 700, 2.2px);
+  text-decoration: none;
+  color: colors.$primary;
+  margin-top: 2vh;
+}

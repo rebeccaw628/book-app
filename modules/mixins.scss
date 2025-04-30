@@ -1,4 +1,4 @@
-@mixin background {
+@mixin branding {
   background: #5ca0fc;
   background: radial-gradient(
     circle farthest-corner at center center,
@@ -13,4 +13,10 @@
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
+}
+
+@mixin text($size, $weight, $spacing: 2px) {
+  font-size: $size;
+  font-weight: $weight;
+  letter-spacing: $spacing;
 }

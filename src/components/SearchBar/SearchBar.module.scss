@@ -1,14 +1,15 @@
 @use "../../../modules/mixins.scss";
+@use "../../../partials/colors";
 
 .form {
-  position: relative;
-  top: 50%;
-  left: 50%;
+  //   position: relative;
+  //   top: 50%;
+  //   left: 50%;
+  @include mixins.flex(row, center);
   width: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  margin-left: 50%;
+  margin-top: 5vh;
   gap: 0.5em;
   border-radius: 40px;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
@@ -19,16 +20,16 @@
   &.focus {
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
   }
-  //   border: solid 2px red;
+  // border: solid 2px red;
 }
 
 .searchBar {
   //   position: absolute;
   //   top: 10px;
   margin-left: 20px;
-  font-size: 14px;
+  font-size: 13px;
   background: none;
-  color: #2e3338;
+  color: colors.$secondary;
   width: 90%;
   height: 20px;
   border: none;
@@ -42,6 +43,9 @@
 
 .searchBtn {
   all: unset;
+  // &:hover {
+  //   background-color: colors.$bg;
+  // }
 }
 
 input::placeholder {
@@ -50,6 +54,9 @@ input::placeholder {
 
 .icon {
   font-size: 50px;
-  @include mixins.background;
-  color: #64a8d6;
+  color: colors.$primary;
+  cursor: pointer;
+  &:hover {
+    color: colors.$secondary;
+  }
 }

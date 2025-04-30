@@ -1,0 +1,11 @@
+@use "../../../partials/colors";
+@use "../../../partials/media-queries" as mq;
+
+.text {
+  color: colors.$secondary;
+  font-weight: 600;
+  margin-top: 0px;
+  @include mq.md-up {
+    margin-bottom: 0px;
+  }
+}

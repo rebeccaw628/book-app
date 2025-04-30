@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import Home from "./container/Home/Home";
-import { useState } from "react";
+import Results from "./container/Results/Results";
+// import NoResults from "./container/NoResults/NoResults";
 import classes from "./App.module.scss";
-import SearchBar from "./components/SearchBar/SearchBar";
 
 function App() {
   return (
@@ -10,8 +10,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/results" element={<Results />} />
-          <Route path="/*" element={<NotFound />} /> */}
+          <Route path="/search/" element={<Results />} />
+          <Route path="/search/:searchTerm" element={<Results />} />
+          {/* <Route path="/*" element={<NoResults />} /> */}
         </Routes>
       </BrowserRouter>
     </>
