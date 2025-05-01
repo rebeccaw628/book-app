@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router";
+import { useParams } from "react-router";
 import classes from "./Results.module.scss";
 import Header from "../../components/Header/Header";
 import Logo from "../../components/Logo/Logo";
@@ -11,7 +11,6 @@ const Results = () => {
   const [selected, setSelected] = useState(10);
   const [books, setBooks] = useState([]);
   const [page, setPage] = useState(1);
-  const [error, setError] = useState(null);
   const [noResults, setNoResults] = useState(false);
   const { searchTerm } = useParams();
 
@@ -44,7 +43,6 @@ const Results = () => {
         setNoResults(false);
       })
       .catch((e) => {
-        setError(e);
         setNoResults(true);
         setBooks(null);
       });

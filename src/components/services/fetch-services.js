@@ -6,7 +6,7 @@ export const getBooks = async (searchTerm, page, maxResults) => {
   const response = await fetch(url);
 
   if (!response.ok) {
-    throw new Error("Invalid search term.");
+    throw new Error();
   }
 
   const data = await response.json();
