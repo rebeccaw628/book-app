@@ -79,7 +79,7 @@ Fetch Logic:
 - Map through the data and pass key info (image, title, authors, description) to individual book card components
 - When the input state changes, the component re-fetches and re-renders updated book results
 
-Issues Addressed
+## Issues Addressed
 
 - Resolved responsiveness challenges to ensure consistent layout across various screen sizes and devices
 - Managed text overflow issues by applying proper styling to prevent layout breaks and maintain readability, especially for long titles and descriptions
