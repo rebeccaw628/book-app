@@ -5,7 +5,7 @@ import Results from "./container/Results/Results";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/book-app">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search/" element={<Results />} />
