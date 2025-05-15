@@ -4,7 +4,7 @@
 
 A simple and responsive web app that allows users to search for books using the Google Books API. Results include key details like title, author, cover image, and description.
 
-### 🚀 [Launch the Live Site]
+### 🚀 [Launch the Live Site](https://rebeccaw628.github.io/book-app/)
 
 ### Tech Stack
 
